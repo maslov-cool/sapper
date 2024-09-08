@@ -137,7 +137,6 @@ def open_neighborhood_empty_cells(real_field_, game_field_, motion_row, motion_c
         game_field_[motion_row + 1][motion_col] = real_field_[motion_row + 1][motion_col]
         game_field_[motion_row + 1][motion_col + 1] = real_field_[motion_row + 1][motion_col + 1]
 
-
         if real_field_[motion_row][motion_col - 1] == '   ' and [motion_row, motion_col - 1] not in \
                 use_cords_open_empty_cells:
             use_cords_open_empty_cells.append([motion_row, motion_col - 1])
@@ -521,7 +520,7 @@ def game():
                         field_view = open_neighborhood_empty_cells(real_field, field_view, motion[0], motion[1])
                 else:
                     if first_motion:
-                        real_field = generate_field(field_view, mines, rows, columns, True, motion[0], \
+                        real_field = generate_field(field_view, mines, rows, columns, True, motion[0], 
                                                     motion[1])
                         if real_field[motion[0]][motion[1]] != ' ':
                             field_view[motion[0]][motion[1]] = real_field[motion[0]][motion[1]]
