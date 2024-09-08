@@ -9,7 +9,8 @@ def greeting():
     print("            **    **  **        **        **         **      **  ")
     print("           **    **  ********  ********  ********    **    **   ")
     print("          **    **  ********  ********  ********       **      ")
-    print("Приветствую вас в игре ,,Сапёр''")
+    print("Приветствую вас в игре ,,Сапёр''*")
+    print('* Made by MasIT')
     print('''Сапёр — известная игра-головоломка для одного игрока на прямоугольном поле.''')
     print('''В некоторых точках поля расположены мины. Цель игрока — открыть все клетки, на которых мин нет,''')
     print('''причём нажатие на мину означает мгновенный проигрыш.''')
@@ -520,7 +521,7 @@ def game():
                         field_view = open_neighborhood_empty_cells(real_field, field_view, motion[0], motion[1])
                 else:
                     if first_motion:
-                        real_field = generate_field(field_view, mines, rows, columns, True, motion[0], 
+                        real_field = generate_field(field_view, mines, rows, columns, True, motion[0],
                                                     motion[1])
                         if real_field[motion[0]][motion[1]] != ' ':
                             field_view[motion[0]][motion[1]] = real_field[motion[0]][motion[1]]
@@ -571,7 +572,8 @@ def final():
             print('Оцените игру от 0 до 10')
         print('Спасибо за оценку')
         print('Будем рады видеть Вас ещё!')
-        print('До свиданья!')
+        print('До свиданья!*')
+        print('* Made by MasIT')
 
 
 game()
